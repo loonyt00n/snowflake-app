@@ -21,4 +21,4 @@ jobs:
           echo "SNOWFLAKE_WAREHOUSE=${{ secrets.SNOWFLAKE_WAREHOUSE }}" >>  /backend/.env
           echo "SNOWFLAKE_DATABASE=${{ secrets.SNOWFLAKE_DATABASE }}" >>  /backend/.env
           echo "SNOWFLAKE_SCHEMA=${{ secrets.SNOWFLAKE_SCHEMA }}" >>  /backend/.env
-          echo "Port=5000" >>  /backend/.env
+          echo "PORT=5000" >>  /backend/.env
