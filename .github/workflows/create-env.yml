@@ -14,12 +14,12 @@ jobs:
 
       - name: Create .env file
         run: |
-          touch /backend/.env
-          echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> /backend/.env
-          echo "SNOWFLAKE_USERNAME=${{ secrets.SNOWFLAKE_USERNAME }}" >> /backend/.env
-          echo "SNOWFLAKE_PASSWORD=${{ secrets.SNOWFLAKE_PASSWORD }}" >> /backend/.env
-          echo "SNOWFLAKE_ROLE=${{ secrets.SNOWFLAKE_ROLE }}" >> /backend/.env
-          echo "SNOWFLAKE_WAREHOUSE=${{ secrets.SNOWFLAKE_WAREHOUSE }}" >> /backend/.env
-          echo "SNOWFLAKE_DATABASE=${{ secrets.SNOWFLAKE_DATABASE }}" >> /backend/.env
-          echo "SNOWFLAKE_SCHEMA=${{ secrets.SNOWFLAKE_SCHEMA }}" >> /backend/.env
-          echo "PORT=5000" >> /backend/.env
+          touch backend/.env
+          echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> backend/.env
+          echo "SNOWFLAKE_USERNAME=${{ secrets.SNOWFLAKE_USERNAME }}" >> backend/.env
+          echo "SNOWFLAKE_PASSWORD=${{ secrets.SNOWFLAKE_PASSWORD }}" >> backend/.env
+          echo "SNOWFLAKE_ROLE=${{ secrets.SNOWFLAKE_ROLE }}" >> backend/.env
+          echo "SNOWFLAKE_WAREHOUSE=${{ secrets.SNOWFLAKE_WAREHOUSE }}" >> backend/.env
+          echo "SNOWFLAKE_DATABASE=${{ secrets.SNOWFLAKE_DATABASE }}" >> backend/.env
+          echo "SNOWFLAKE_SCHEMA=${{ secrets.SNOWFLAKE_SCHEMA }}" >> backend/.env
+          echo "PORT=5000" >> backend/.env
