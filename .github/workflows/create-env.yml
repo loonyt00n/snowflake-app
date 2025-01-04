@@ -1,0 +1,26 @@
+name: Create .env File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-envfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create .env file
+        uses: SpicyPizza/create-env-file@v2.0
+        with:
+            envkey_SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+            envkey_SNOWFLAKE_USERNAME: ${{ secrets.SNOWFLAKE_USERNAME }}
+            envkey_SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}$
+            envkey_SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+            envkey_SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+            envkey_SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+            envkey_SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
+            directory: /backend  # Specify the directory where you want to create the .env file
+            file_name: .env  # Name of the output file
